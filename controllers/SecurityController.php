@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace dektrium\user\controllers;
+namespace polucorus\user\controllers;
 
-use dektrium\user\Finder;
-use dektrium\user\models\Account;
-use dektrium\user\models\LoginForm;
-use dektrium\user\models\User;
-use dektrium\user\Module;
-use dektrium\user\traits\AjaxValidationTrait;
-use dektrium\user\traits\EventTrait;
+use polucorus\user\Finder;
+use polucorus\user\models\Account;
+use polucorus\user\models\LoginForm;
+use polucorus\user\models\User;
+use polucorus\user\Module;
+use polucorus\user\traits\AjaxValidationTrait;
+use polucorus\user\traits\EventTrait;
 use yii\authclient\AuthAction;
 use yii\authclient\ClientInterface;
 use yii\filters\AccessControl;
@@ -40,49 +40,49 @@ class SecurityController extends Controller
 
     /**
      * Event is triggered before logging user in.
-     * Triggered with \dektrium\user\events\FormEvent.
+     * Triggered with \polucorus\user\events\FormEvent.
      */
     const EVENT_BEFORE_LOGIN = 'beforeLogin';
 
     /**
      * Event is triggered after logging user in.
-     * Triggered with \dektrium\user\events\FormEvent.
+     * Triggered with \polucorus\user\events\FormEvent.
      */
     const EVENT_AFTER_LOGIN = 'afterLogin';
 
     /**
      * Event is triggered before logging user out.
-     * Triggered with \dektrium\user\events\UserEvent.
+     * Triggered with \polucorus\user\events\UserEvent.
      */
     const EVENT_BEFORE_LOGOUT = 'beforeLogout';
 
     /**
      * Event is triggered after logging user out.
-     * Triggered with \dektrium\user\events\UserEvent.
+     * Triggered with \polucorus\user\events\UserEvent.
      */
     const EVENT_AFTER_LOGOUT = 'afterLogout';
 
     /**
      * Event is triggered before authenticating user via social network.
-     * Triggered with \dektrium\user\events\AuthEvent.
+     * Triggered with \polucorus\user\events\AuthEvent.
      */
     const EVENT_BEFORE_AUTHENTICATE = 'beforeAuthenticate';
 
     /**
      * Event is triggered after authenticating user via social network.
-     * Triggered with \dektrium\user\events\AuthEvent.
+     * Triggered with \polucorus\user\events\AuthEvent.
      */
     const EVENT_AFTER_AUTHENTICATE = 'afterAuthenticate';
 
     /**
      * Event is triggered before connecting social network account to user.
-     * Triggered with \dektrium\user\events\AuthEvent.
+     * Triggered with \polucorus\user\events\AuthEvent.
      */
     const EVENT_BEFORE_CONNECT = 'beforeConnect';
 
     /**
      * Event is triggered before connecting social network account to user.
-     * Triggered with \dektrium\user\events\AuthEvent.
+     * Triggered with \polucorus\user\events\AuthEvent.
      */
     const EVENT_AFTER_CONNECT = 'afterConnect';
 

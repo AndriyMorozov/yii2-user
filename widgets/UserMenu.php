@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace dektrium\user\widgets;
+namespace polucorus\user\widgets;
 
 use yii\widgets\Menu;
 use Yii;
@@ -20,16 +20,16 @@ use yii\base\Widget;
  */
 class UserMenu extends Widget
 {
-    
-    /** @array \dektrium\user\models\RegistrationForm */
+
+    /** @array \polucorus\user\models\RegistrationForm */
     public $items;
-    
+
     public function init()
     {
         parent::init();
-        
+
         $networksVisible = count(Yii::$app->authClientCollection->clients) > 0;
-        
+
         $this->items = [
                 ['label' => Yii::t('user', 'Profile'), 'url' => ['/user/settings/profile']],
                 ['label' => Yii::t('user', 'Account'), 'url' => ['/user/settings/account']],
@@ -40,7 +40,7 @@ class UserMenu extends Widget
                 ],
             ];
     }
-    
+
     /**
      * @inheritdoc
      */

@@ -9,12 +9,12 @@
  * file that was distributed with this source code.
  */
 
-namespace dektrium\user\models;
+namespace polucorus\user\models;
 
-use dektrium\user\helpers\Password;
-use dektrium\user\Mailer;
-use dektrium\user\Module;
-use dektrium\user\traits\ModuleTrait;
+use polucorus\user\helpers\Password;
+use polucorus\user\Mailer;
+use polucorus\user\Module;
+use polucorus\user\traits\ModuleTrait;
 use Yii;
 use yii\base\Model;
 

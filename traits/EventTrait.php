@@ -9,19 +9,19 @@
  * file that was distributed with this source code.
  */
 
-namespace dektrium\user\traits;
+namespace polucorus\user\traits;
 
-use dektrium\user\events\AuthEvent;
-use dektrium\user\events\ConnectEvent;
-use dektrium\user\events\FormEvent;
-use dektrium\user\events\ProfileEvent;
-use dektrium\user\events\ResetPasswordEvent;
-use dektrium\user\events\UserEvent;
-use dektrium\user\models\Account;
-use dektrium\user\models\Profile;
-use dektrium\user\models\RecoveryForm;
-use dektrium\user\models\Token;
-use dektrium\user\models\User;
+use polucorus\user\events\AuthEvent;
+use polucorus\user\events\ConnectEvent;
+use polucorus\user\events\FormEvent;
+use polucorus\user\events\ProfileEvent;
+use polucorus\user\events\ResetPasswordEvent;
+use polucorus\user\events\UserEvent;
+use polucorus\user\models\Account;
+use polucorus\user\models\Profile;
+use polucorus\user\models\RecoveryForm;
+use polucorus\user\models\Token;
+use polucorus\user\models\User;
 use yii\authclient\ClientInterface;
 use yii\base\Model;
 

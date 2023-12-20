@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace dektrium\user\events;
+namespace polucorus\user\events;
 
-use dektrium\user\models\User;
+use polucorus\user\models\User;
 use yii\base\Event;
 
 /**

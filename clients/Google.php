@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace dektrium\user\clients;
+namespace polucorus\user\clients;
 
 use yii\authclient\clients\Google as BaseGoogle;
 
@@ -34,7 +34,7 @@ class Google extends BaseGoogle implements ClientInterface
 
         return parent::buildAuthUrl($params);
     }
-    
+
     /** @inheritdoc */
     public function getEmail()
     {

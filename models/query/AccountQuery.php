@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace dektrium\user\models\query;
+namespace polucorus\user\models\query;
 
-use dektrium\user\models\Account;
+use polucorus\user\models\Account;
 use yii\authclient\ClientInterface;
 use yii\db\ActiveQuery;
 

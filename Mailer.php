@@ -9,10 +9,10 @@
  * file that was distributed with this source code.
  */
 
-namespace dektrium\user;
+namespace polucorus\user;
 
-use dektrium\user\models\Token;
-use dektrium\user\models\User;
+use polucorus\user\models\Token;
+use polucorus\user\models\User;
 use Yii;
 use yii\base\Component;
 
@@ -47,7 +47,7 @@ class Mailer extends Component
     /** @var string */
     protected $recoverySubject;
 
-    /** @var \dektrium\user\Module */
+    /** @var \polucorus\user\Module */
     protected $module;
 
     /**

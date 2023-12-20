@@ -9,10 +9,10 @@
  * file that was distributed with this source code.
  */
 
-namespace dektrium\user\events;
+namespace polucorus\user\events;
 
-use dektrium\user\models\RecoveryForm;
-use dektrium\user\models\Token;
+use polucorus\user\models\RecoveryForm;
+use polucorus\user\models\Token;
 use yii\base\Event;
 
 /**

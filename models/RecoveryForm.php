@@ -9,10 +9,10 @@
  * file that was distributed with this source code.
  */
 
-namespace dektrium\user\models;
+namespace polucorus\user\models;
 
-use dektrium\user\Finder;
-use dektrium\user\Mailer;
+use polucorus\user\Finder;
+use polucorus\user\Mailer;
 use yii\base\Model;
 
 /**

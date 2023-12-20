@@ -9,11 +9,11 @@
  * file that was distributed with this source code.
  */
 
-namespace dektrium\user\models;
+namespace polucorus\user\models;
 
-use dektrium\user\Finder;
-use dektrium\user\helpers\Password;
-use dektrium\user\traits\ModuleTrait;
+use polucorus\user\Finder;
+use polucorus\user\helpers\Password;
+use polucorus\user\traits\ModuleTrait;
 use yii\helpers\ArrayHelper;
 use yii\helpers\Html;
 use Yii;
@@ -38,7 +38,7 @@ class LoginForm extends Model
     /** @var string Whether to remember the user */
     public $rememberMe = false;
 
-    /** @var \dektrium\user\models\User */
+    /** @var \polucorus\user\models\User */
     protected $user;
 
     /** @var Finder */
@@ -61,7 +61,7 @@ class LoginForm extends Model
      */
     public static function loginList()
     {
-        /** @var \dektrium\user\Module $module */
+        /** @var \polucorus\user\Module $module */
         $module = \Yii::$app->getModule('user');
 
         $userModel = $module->modelMap['User'];
