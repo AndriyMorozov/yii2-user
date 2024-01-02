@@ -35,6 +35,7 @@ use yii\helpers\ArrayHelper;
  * @property integer $id
  * @property string  $username
  * @property string  $email
+ * @property string  $fio
  * @property string  $unconfirmed_email
  * @property string  $password_hash
  * @property string  $auth_key
@@ -195,6 +196,7 @@ class User extends ActiveRecord implements IdentityInterface
             'created_at'        => \Yii::t('user', 'Registration time'),
             'last_login_at'     => \Yii::t('user', 'Last login'),
             'confirmed_at'      => \Yii::t('user', 'Confirmation time'),
+            'fio'               => 'ПІБ користувача',
         ];
     }
 
