@@ -1,5 +1,5 @@
 {
-    "name": "polucorus/yii2-user",
+    "name": "andriymorozov/yii2-user",
     "description": "Flexible user registration and authentication module for Yii2",
     "keywords": ["yii2", "yii2-user", "user management"],
     "type": "yii2-extension",
@@ -12,8 +12,7 @@
     "authors": [
         {
             "name": "Dmitry Erofeev",
-            "email": "dmeroff@gmail.com",
-            "homepage": "http://dmeroff.ru"
+            "email": "dmeroff@gmail.com"
         }
     ],
     "minimum-stability": "dev",
