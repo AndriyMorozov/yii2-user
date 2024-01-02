@@ -34,8 +34,8 @@ $this->params['breadcrumbs'][] = $this->title;
 
 <?= GridView::widget([
     'dataProvider' => $dataProvider,
-    'filterModel'  => $searchModel,
-    'layout'       => "{items}\n{pager}",
+    'filterModel' => $searchModel,
+    'layout' => "{items}\n{pager}",
     'columns' => [
         [
             'attribute' => 'id',
@@ -44,37 +44,39 @@ $this->params['breadcrumbs'][] = $this->title;
         'username',
         'fio',
         'email:email',
-      /*  [
-            'attribute' => 'registration_ip',
-            'value' => function ($model) {
-                return $model->registration_ip == null
-                    ? '<span class="not-set">' . Yii::t('user', '(not set)') . '</span>'
-                    : $model->registration_ip;
-            },
-            'format' => 'html',
-        ],*/
+        /*  [
+              'attribute' => 'registration_ip',
+              'value' => function ($model) {
+                  return $model->registration_ip == null
+                      ? '<span class="not-set">' . Yii::t('user', '(not set)') . '</span>'
+                      : $model->registration_ip;
+              },
+              'format' => 'html',
+          ],*/
         [
             'attribute' => 'created_at',
             'value' => function ($model) {
-                if (extension_loaded('intl')) {
+                return date('Y-m-d G:i:s', $model->created_at);
+                /*if (extension_loaded('intl')) {
                     return Yii::t('user', '{0, date, dd MMMM, YYYY HH:mm}', [$model->created_at]);
                 } else {
                     return date('Y-m-d G:i:s', $model->created_at);
-                }
+                }*/
             },
         ],
 
         [
-          'attribute' => 'last_login_at',
-          'value' => function ($model) {
-            if (!$model->last_login_at || $model->last_login_at == 0) {
-                return Yii::t('user', 'Never');
-            } else if (extension_loaded('intl')) {
+            'attribute' => 'last_login_at',
+            'value' => function ($model) {
+                if (!$model->last_login_at || $model->last_login_at == 0) {
+                    return Yii::t('user', 'Never');
+                } else /*if (extension_loaded('intl')) {
                 return Yii::t('user', '{0, date, MMMM dd, YYYY HH:mm}', [$model->last_login_at]);
             } else {
                 return date('Y-m-d G:i:s', $model->last_login_at);
-            }
-          },
+            }*/
+                    return date('Y-m-d G:i:s', $model->last_login_at);
+            },
         ],
         [
             'header' => Yii::t('user', 'Confirmation'),
@@ -126,7 +128,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     }
                 },
                 'switch' => function ($url, $model) {
-                    if(\Yii::$app->user->identity->isAdmin && $model->id != Yii::$app->user->id && Yii::$app->getModule('user')->enableImpersonateUser) {
+                    if (\Yii::$app->user->identity->isAdmin && $model->id != Yii::$app->user->id && Yii::$app->getModule('user')->enableImpersonateUser) {
                         return Html::a('<span class="glyphicon glyphicon-user"></span>', ['/user/admin/switch', 'id' => $model->id], [
                             'title' => Yii::t('user', 'Become this user'),
                             'data-confirm' => Yii::t('user', 'Are you sure you want to switch to this user for the rest of this Session?'),

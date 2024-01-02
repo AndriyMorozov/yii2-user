@@ -39,6 +39,9 @@ class UserSearch extends Model
     /** @var string */
     public $registration_ip;
 
+    /** @var string */
+    public $fio;
+
     /** @var Finder */
     protected $finder;
 
@@ -56,7 +59,7 @@ class UserSearch extends Model
     public function rules()
     {
         return [
-            'fieldsSafe' => [['id', 'username', 'email', 'registration_ip', 'created_at', 'last_login_at'], 'safe'],
+            'fieldsSafe' => [['id', 'fio', 'username', 'email', 'registration_ip', 'created_at', 'last_login_at'], 'safe'],
             'createdDefault' => ['created_at', 'default', 'value' => null],
             'lastloginDefault' => ['last_login_at', 'default', 'value' => null],
         ];
@@ -72,6 +75,7 @@ class UserSearch extends Model
             'created_at'      => Yii::t('user', 'Registration time'),
             'last_login_at'   => Yii::t('user', 'Last login'),
             'registration_ip' => Yii::t('user', 'Registration ip'),
+            'fio'             => 'ПІБ користувача',
         ];
     }
 
@@ -103,6 +107,7 @@ class UserSearch extends Model
 
         $query->andFilterWhere(['like', $table_name . '.username', $this->username])
               ->andFilterWhere(['like', $table_name . '.email', $this->email])
+              ->andFilterWhere(['like', $table_name . '.fio', $this->fio])
               ->andFilterWhere([$table_name . '.id' => $this->id])
               ->andFilterWhere([$table_name . '.registration_ip' => $this->registration_ip]);
 
