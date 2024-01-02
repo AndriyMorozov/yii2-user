@@ -147,7 +147,7 @@ class SecurityController extends Controller
         if (!\Yii::$app->user->isGuest) {
             $this->goHome();
         }
-        return $this->redirect(['site/login']);
+        return $this->redirect(['/site/login']);
 
         /** @var LoginForm $model */
         $model = \Yii::createObject(LoginForm::className());
