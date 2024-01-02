@@ -42,8 +42,9 @@ $this->params['breadcrumbs'][] = $this->title;
             'headerOptions' => ['style' => 'width:90px;'], # 90px is sufficient for 5-digit user ids
         ],
         'username',
+        'fio',
         'email:email',
-        [
+      /*  [
             'attribute' => 'registration_ip',
             'value' => function ($model) {
                 return $model->registration_ip == null
@@ -51,12 +52,12 @@ $this->params['breadcrumbs'][] = $this->title;
                     : $model->registration_ip;
             },
             'format' => 'html',
-        ],
+        ],*/
         [
             'attribute' => 'created_at',
             'value' => function ($model) {
                 if (extension_loaded('intl')) {
-                    return Yii::t('user', '{0, date, MMMM dd, YYYY HH:mm}', [$model->created_at]);
+                    return Yii::t('user', '{0, date, dd MMMM, YYYY HH:mm}', [$model->created_at]);
                 } else {
                     return date('Y-m-d G:i:s', $model->created_at);
                 }
